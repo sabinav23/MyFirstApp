@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Vaida_Sabina_Lab2"
         mc:Ignorable="d"
         Title=" Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Loaded="frmMain_Loaded" >
-    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" MenuItem.Click="FilledItemsShow_Click">
         <Label x:Name="lblTitle" Content=" Doughnuts - Bake &amp; Sale" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Height="51" Width="566" FontSize="24" Margin="218,27,0,0"/>
         <GroupBox x:Name="gbRaised" Header="Raised" HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="149" FontWeight="Bold" Margin="192,100,0,0"/>
         <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="54,100,0,0"/>
@@ -59,7 +59,11 @@
                         <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed" Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
                         <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
-                    <MenuItem Header="Filled"/>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" Click="FilledItems_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True" Click="FilledItems_Click"/>
+                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True" Click="FilledItems_Click"/>
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
